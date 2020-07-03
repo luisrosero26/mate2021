@@ -1,0 +1,22 @@
+completion_text: |-
+  <p>seman completada</p>
+description: "semana 1 descripci\xF3n"
+next_flow_id: quiz1
+next_flow_title: 'Ir al Quiz #1'
+pages:
+- content: |-
+    <p>semana 1 contenido&nbsp;</p>
+  id: intro
+  title: INICIO
+  type: Page
+- content: |-
+    <p>Este es el contenido de la semana 1 para que los estudiantes puedan realizar el quiz sin problemas</p>
+  id: page3
+  title: Contenido de la semana 1
+  type: Page
+rules:
+  access:
+  - if_has_role: [ta, student, instructor]
+    permissions: [view]
+  grade_identifier: null
+title: semana 1
