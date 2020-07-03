@@ -1,0 +1,42 @@
+completion_text: |-
+  <p>Gj terminaste el Quiz</p>
+description: "Descripci\xF3n del quiz #1"
+groups:
+- id: intro
+  pages:
+  - content: "<p>Contenido del quiz #1</p> "
+    id: welcome
+    title: 'Quiz #1'
+    type: Page
+- id: quiz_start
+  pages:
+  - answers: [<plain>julian]
+    id: quizquestion1
+    prompt: ''
+    title: 'Pregunta #1 tipo texto'
+    type: TextQuestion
+    value: 5.0
+  - choices: [ocho, ~CORRECT~ dos, cuatro, cinco]
+    credit_mode: exact
+    id: quizquestion2
+    prompt: ''
+    shuffle: false
+    title: 'pregunta #2 tipo multiple'
+    type: MultipleChoiceQuestion
+    value: 5.0
+  shuffle: false
+rules:
+  access:
+  - permissions: [view, submit_answer, end_session, see_correctness, see_answer_after_submission]
+  grade_aggregation_strategy: max_grade
+  grade_identifier: quiz1
+  grading:
+  - {credit_percent: 48}
+  start:
+  - if_before: 2020-08-03 15:44:50+00:00
+    if_has_fewer_sessions_than: 9
+    if_has_role: [student, ta, instructor]
+    may_list_existing_sessions: true
+    may_start_new_session: true
+  - {may_list_existing_sessions: true, may_start_new_session: false}
+title: 'Quiz #1'
