@@ -1,0 +1,13 @@
+chunks:
+- content: ''
+  flows:
+  - flow_id: flow2
+    next_flow: quiz1
+    pages:
+    - {flow_id: page3, title: Contenido de la semana 1}
+    title: semana 1
+    title_next_flow: 'Ir al Quiz #1'
+  id: welcome
+  introduction: "<p>introducci\xF3n al curso de matematicas</p>"
+  rules: []
+  title: mate2021
